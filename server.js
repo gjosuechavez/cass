@@ -1,6 +1,6 @@
-import express from 'express';
-import fs from 'fs';
-import './bot.js'; // Inicia el bot al arrancar el server
+const express = require('express');
+const fs = require('fs');
+require('./bot.js'); // Inicia el bot al arrancar el server
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -15,3 +15,4 @@ app.get('/pensamientos', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
